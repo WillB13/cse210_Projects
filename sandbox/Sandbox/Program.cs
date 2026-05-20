@@ -1,9 +1,17 @@
 using System;
 
-class Program
+class Angle
 {
-    static void Main(string[] args)
+    public static void Main(string[] args)
+    private double _radians;
+
+    public double GetRadians()
     {
-        Console.WriteLine("Hello Sandbox World!");
+        return _radians;
+    }
+
+    public void SetRadians(double radians)
+    {
+        _radians = radians;
     }
 }
