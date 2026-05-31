@@ -4,6 +4,34 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop03 World!");
+        ScriptureReference reference =
+            new ScriptureReference("Proverbs", 3, 5, 6);
+
+        Scripture scripture = new Scripture(
+            reference,
+            "Trust in the Lord with all thine heart and lean not unto thine own understanding In all thy ways acknowledge him and he shall direct thy paths");
+
+        while (!scripture.IsCompletelyHidden())
+        {
+            Console.Clear();
+
+            Console.WriteLine(scripture.GetDisplayText());
+            Console.WriteLine();
+
+            Console.Write("Press Enter to hide words or type quit to end: ");
+            string input = Console.ReadLine();
+
+            if (input.ToLower() == "quit")
+            {
+                return;
+            }
+
+            scripture.HideRandomWords(3);
+        }
+
+        Console.Clear();
+        Console.WriteLine(scripture.GetDisplayText());
+        Console.WriteLine();
+        Console.WriteLine("No more words to hide.");
     }
 }
