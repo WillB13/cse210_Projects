@@ -21,19 +21,16 @@ class Program
             switch (choice)
             {
                 case "1":
-                    // BreathingActivity expects 1 string argument for its description
                     BreathingActivity breathing = new BreathingActivity("This activity will help you relax by walking you through breathing in and out slowly.");
                     breathing.RunActivity();
                     break;
 
                 case "2":
-                    // ReflectingActivity takes 0 arguments because description is hardcoded inside it
                     ReflectingActivity reflecting = new ReflectingActivity();
                     reflecting.RunActivity();
                     break;
 
                 case "3":
-                    // ListingActivity takes 0 arguments because description is hardcoded inside it
                     ListingActivity listing = new ListingActivity();
                     listing.RunActivity();
                     break;
